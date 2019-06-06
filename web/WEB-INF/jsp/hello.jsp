@@ -4,6 +4,9 @@
     Author     : V19MFoda
 --%>
 
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>  
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +15,18 @@
         <title>JSP Page</title>
     </head>
     <body>
-      ${userObject.id}
+   
+        
+        
+        <form:form action="user" modelAttribute="userObject" >
+            <form:input path="id"/>
+            <form:errors path="id" />
+            <input type="submit" value="Submit"/>
+                
+            
+        </form:form>
+        
+    
+    
     </body>
 </html>
